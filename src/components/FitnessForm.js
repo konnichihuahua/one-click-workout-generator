@@ -102,8 +102,7 @@ const FitnessForm = () => {
               workout.
             </div>
           </label>
-          <input
-            type="text"
+          <textarea
             className="h-20 p-2 text-xs"
             value={specificPreferences}
             onChange={(e) => setSpecificPreferences(e.target.value)}
@@ -140,8 +139,7 @@ const FitnessForm = () => {
             </div>
           </label>
 
-          <input
-            type="text"
+          <textarea
             className="h-20 p-2 text-xs "
             value={medicalConditions}
             onChange={(e) => setMedicalConditions(e.target.value)}
