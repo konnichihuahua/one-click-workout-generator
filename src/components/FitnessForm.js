@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 const FitnessForm = () => {
-  const [fitnessGoals, setFitnessGoals] = useState("");
-  const [fitnessLevel, setFitnessLevel] = useState("");
+  const [fitnessGoals, setFitnessGoals] = useState("Weight Loss");
+  const [fitnessLevel, setFitnessLevel] = useState("Beginner");
   const [workoutEquipment, setWorkoutEquipment] = useState("");
-  const [workoutDuration, setWorkoutDuration] = useState("");
+  const [workoutDuration, setWorkoutDuration] = useState("Short");
   const [specificPreferences, setSpecificPreferences] = useState("");
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
@@ -26,7 +26,7 @@ const FitnessForm = () => {
       age,
       medicalConditions,
     };
-
+    console.log(formData);
     // Send the form data to your app's backend for further processing
 
     // Clear the form after submission
@@ -52,9 +52,7 @@ const FitnessForm = () => {
             onChange={(e) => setFitnessGoals(e.target.value)}
           >
             <option value="Weight Loss">Weight Loss</option>
-            <option value="Muscle Gain" selected>
-              Muscle Gain
-            </option>
+            <option value="Muscle Gain">Muscle Gain</option>
             <option value="Improve Fitness">Improve Fitness</option>
           </select>
 
@@ -64,9 +62,7 @@ const FitnessForm = () => {
             onChange={(e) => setFitnessLevel(e.target.value)}
           >
             <option value="Beginner">Beginner</option>
-            <option value="Intermediate" selected>
-              Intermediate
-            </option>
+            <option value="Intermediate">Intermediate</option>
             <option value="Advanced">Advanced</option>
           </select>
           <label>Workout Duration: </label>
@@ -75,9 +71,7 @@ const FitnessForm = () => {
             onChange={(e) => setWorkoutDuration(e.target.value)}
           >
             <option value="Short">Short (25 minutes or less) </option>
-            <option value="Medium" selected>
-              1 Hour
-            </option>
+            <option value="Medium">1 Hour</option>
             <option value="Long">1.5 hours</option>
           </select>
           <label>

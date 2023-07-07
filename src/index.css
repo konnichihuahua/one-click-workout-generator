@@ -26,3 +26,7 @@ input {
 select {
   color: #111111;
 }
+
+textarea {
+  color: #111111;
+}
