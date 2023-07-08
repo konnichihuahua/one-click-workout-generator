@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FitnessForm = () => {
+const FitnessForm = ({ setShowResults, setFormData }) => {
   const [fitnessGoals, setFitnessGoals] = useState("Weight Loss");
   const [fitnessLevel, setFitnessLevel] = useState("Beginner");
   const [workoutEquipment, setWorkoutEquipment] = useState("");
@@ -26,7 +26,9 @@ const FitnessForm = () => {
       age,
       medicalConditions,
     };
-    console.log(formData);
+    setFormData(formData);
+
+    setShowResults(true);
     // Send the form data to your app's backend for further processing
 
     // Clear the form after submission
