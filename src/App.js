@@ -5,7 +5,6 @@ import Results from "./components/Results";
 import { useState } from "react";
 
 function App() {
-  console.log(process.env.REACT_APP_API_URL);
   const [showResults, setShowResults] = useState(false);
   const [formData, setFormData] = useState({});
   return (
