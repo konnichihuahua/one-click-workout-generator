@@ -22,7 +22,9 @@ function Results({ formData }) {
             • My fitness level is ${formData.fitnessLevel}. 
             • Make it ${formData.workoutDuration}
             • Using only these ${formData.workoutEquipment}
-            • My specific preference is ${formData.specificPreferences}`,
+            • My specific preference is ${formData.specificPreferences}
+            
+            Make it a table format`,
           },
         ],
       })
@@ -30,7 +32,9 @@ function Results({ formData }) {
   };
 
   return (
-    <div>
+    <div className="p-10 flex self-center justify-center flex-col">
+      Fitness Goal: {formData.fitnessGoals} <br></br>
+      Fitness Level: {formData.fitnessLevel} <br></br>
       {results}
       <button onClick={() => sendToGPT()}> Click me</button>
     </div>
