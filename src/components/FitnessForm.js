@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
-const FitnessForm = ({ setShowResults, setFormData }) => {
+const FitnessForm = ({ setShowResults, sendToGPT }) => {
   const [fitnessGoals, setFitnessGoals] = useState("Weight Loss");
   const [fitnessLevel, setFitnessLevel] = useState("Beginner");
   const [workoutEquipment, setWorkoutEquipment] = useState("");
   const [workoutDuration, setWorkoutDuration] = useState("Short");
+  const [workoutDays, setWorkoutDays] = useState("3");
   const [specificPreferences, setSpecificPreferences] = useState("");
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
@@ -13,20 +14,21 @@ const FitnessForm = ({ setShowResults, setFormData }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     // Process the form data
     const formData = {
       fitnessGoals,
       fitnessLevel,
       workoutEquipment,
       workoutDuration,
+      workoutDays,
       specificPreferences,
       height,
       weight,
       age,
       medicalConditions,
     };
-    setFormData(formData);
+
+    sendToGPT(formData);
 
     setShowResults(true);
     // Send the form data to your app's backend for further processing
@@ -36,6 +38,7 @@ const FitnessForm = ({ setShowResults, setFormData }) => {
     setFitnessLevel("");
     setWorkoutEquipment("");
     setWorkoutDuration("");
+    setWorkoutDays("");
     setSpecificPreferences("");
     setHeight("");
     setWeight("");
@@ -76,6 +79,12 @@ const FitnessForm = ({ setShowResults, setFormData }) => {
             <option value="Medium">1 Hour</option>
             <option value="Long">1.5 hours</option>
           </select>
+          <label>How many workout days per week? </label>
+          <input
+            type="number"
+            value={workoutDays}
+            onChange={(e) => setWorkoutDays(e.target.value)}
+          />
           <label>
             {" "}
             Workout Equipment(s):
