@@ -7,7 +7,7 @@ import { Configuration, OpenAIApi } from "openai";
 
 function App() {
   const [showResults, setShowResults] = useState(false);
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState({});
   const configuration = new Configuration({
     apiKey: process.env.REACT_APP_API_URL,
   });
@@ -30,20 +30,20 @@ function App() {
             • My specific preference is ${data.specificPreferences}
             • ${data.workoutDays} workout days per week
 
-            Make the response in .json format separated by days of workout.`,
+            Make the response in JSON format separated by days of workout. With each object having workoutDescription and exercises. Under exercises there will be name, sets, reps and rest. `,
           },
         ],
       })
       .then((result) => {
         console.log(result.data.choices[0].message.content);
         const gptResponse = result.data.choices[0].message.content;
-        setResults(gptResponse);
+        setResults(JSON.parse(gptResponse));
       });
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="App flex ">
+      <header className="App-header flex flex-col self-center justify-center min-w-full">
         <img src={logo} className="App-logo" alt="logo" />
 
         {showResults ? (

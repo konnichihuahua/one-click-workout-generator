@@ -1,0 +1,89 @@
+{
+    "Monday": {
+        "workoutDescription": "Full Body Workout",
+        "exercises": [
+            {
+                "name": "Squats",
+                "sets": "3",
+                "reps": "10",
+                "rest": "60 seconds"
+            },
+            {
+                "name": "Push-ups",
+                "sets": "3",
+                "reps": "10",
+                "rest": "60 seconds"
+            },
+            {
+                "name": "Lunges",
+                "sets": "3",
+                "reps": "10",
+                "rest": "60 seconds"
+            },
+            {
+                "name": "Plank",
+                "sets": "3",
+                "reps": "30 seconds",
+                "rest": "60 seconds"
+            }
+        ]
+    },
+    "Wednesday": {
+        "workoutDescription": "Cardio Workout",
+        "exercises": [
+            {
+                "name": "Jumping Jacks",
+                "sets": "3",
+                "reps": "30 seconds",
+                "rest": "30 seconds"
+            },
+            {
+                "name": "Burpees",
+                "sets": "3",
+                "reps": "10",
+                "rest": "30 seconds"
+            },
+            {
+                "name": "High Knees",
+                "sets": "3",
+                "reps": "30 seconds",
+                "rest": "30 seconds"
+            },
+            {
+                "name": "Mountain Climbers",
+                "sets": "3",
+                "reps": "10",
+                "rest": "30 seconds"
+            }
+        ]
+    },
+    "Friday": {
+        "workoutDescription": "Upper Body Workout",
+        "exercises": [
+            {
+                "name": "Dumbbell Bicep Curls",
+                "sets": "3",
+                "reps": "10",
+                "rest": "60 seconds"
+            },
+            {
+                "name": "Tricep Dips",
+                "sets": "3",
+                "reps": "10",
+                "rest": "60 seconds"
+            },
+            {
+                "name": "Shoulder Press",
+                "sets": "3",
+                "reps": "10",
+                "rest": "60 seconds"
+            },
+            {
+                "name": "Bent Over Rows",
+                "sets": "3",
+                "reps": "10",
+                "rest": "60 seconds"
+            }
+        ]
+    }
+}
