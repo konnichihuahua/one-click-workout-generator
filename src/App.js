@@ -4,7 +4,7 @@ import FitnessForm from "./components/FitnessForm";
 import Results from "./components/Results";
 import { useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
-import Test from "./components/Test";
+
 function App() {
   const [showResults, setShowResults] = useState(false);
   const [results, setResults] = useState({});
@@ -45,7 +45,7 @@ function App() {
     <div className="App flex ">
       <header className="App-header flex flex-col self-center justify-center min-w-full">
         <img src={logo} className="App-logo" alt="logo" />
-        <Test />
+
         {showResults ? (
           <Results results={results} />
         ) : (
