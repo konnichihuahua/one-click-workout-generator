@@ -30,6 +30,7 @@ function App() {
             • My specific preference is ${data.specificPreferences}
             • ${data.workoutDays} workout days per week
 
+        
             Make the response in JSON format separated by days of workout. With each object having workoutDescription and exercises. Under exercises there will be name, sets, reps and rest. `,
           },
         ],

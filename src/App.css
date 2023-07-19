@@ -3,6 +3,12 @@
   
 }
 
+.document {
+  height: 8.3in;
+  width: 11.7in;
+  
+}
+
 .App-logo {
   height: 20vmin;
   pointer-events: none;
